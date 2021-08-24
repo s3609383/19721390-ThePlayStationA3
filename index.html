@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The PlayStation</title>
+    <link rel="icon" href="Images/1280px-Playstation_logo_colour.svg.png">
+
+    <!--Title: javascript file not working when linked from HTML
+    Author: woot
+    Date: 2013
+    Code version: n/a
+    Availability: https://stackoverflow.com/questions/17505563/javascript-file-not-working-when-linked-from-html-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <!--Image which loads upon loading the page-->
+    <img id = "loading" alt = "" style = "border: 0; margin-left: auto; margin-right: auto;" src = "Images/1280px-Playstation_logo_colour.svg.png"/>
+    
+    <div id="body_content">
+
+        <!--User interaction audio cue
+        Title: How to Play Audio with JavaScript
+        Author: Cukmekerb's Coding Class
+        Date: 2018
+        Code version: n/a
+        Availability: https://www.youtube.com/watch?v=p4OHVJxd2FI-->
+        <audio id="userInteraction">
+            <source src="Audio/PS4TrophySound.wav" type="audio/wav">
+        </audio>
+
+        <!--Navigation bar-->
+        <div id="navbar">
+            <ul>
+                <li><a onclick="playAudio()" href="https://www.sony.com.au/">Sony</a></li>
+                <li><a onclick="playAudio()" href="#accessories">Accessories</a></li>
+                <li><a onclick="playAudio()" id="logo" style="cursor: pointer;" href="#slideshow1"><img class="playstationLogo" alt="logo" src="Images/1280px-Playstation_logo_colour.svg.png" height="40"></a></li>
+                <li><a onclick="playAudio()" href="#competitors">Competitors</a></li>
+                <li><a onclick="playAudio()" href="#accessories">Store</a></li>
+            </ul>
+        </div>
+  
+        <section>
+        
+        <!--Slideshow container
+        Title: How TO - Slideshow
+        Author: w3schools
+        Date: 2021
+        Code version: n/a
+        Availability: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+        
+        <div class="slideshow">
+            
+            <h2 style="margin-top: 0; display: block; font-size: 30px;" id="slideshow1">The PlayStation</h2>
+
+            <div class="mySlides fade">
+                <!--<div class="numbertext">1 / 3</div>-->
+                <img class="img" alt="ps1" src="Images/PS1.png"/>
+                <div class="text">PlayStation Original</div>
+            </div>
+
+            <div class="mySlides fade">
+                <!--<div class="numbertext">2 / 3</div>-->
+                <img class="img" alt="ps1slim" src="Images/PS1slim.png"/>
+                <div class="text">PlayStation Slim</div>
+            </div>
+
+            <div  class="mySlides fade">
+                <!--<div class="numbertext">3 / 3</div>-->
+                
+                <div class="text">Verison Differences</div>
+                
+                <!--Images aligned side by side
+                Title: How TO - Align Images Side By Side
+                Author: w3schools
+                Date: 2021
+                Code version: n/a
+                Availability: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
+                <div class="row">
+                    <div id="hoverimg1" class="column">
+                        <img class="img bounceAnimation bounce" style="cursor: pointer;" alt="ps1bounce" src="Images/PS1.png"/>
+                        <div id="hovertext1">
+                            <p class="paraHover">Larger bulkier design</p>
+                            <p class="paraHover">Easily hackable and not properly protected against modchips</p>
+                            <p class="paraHover">Separate "Reset" button available</p>
+                            <p class="paraHover">"Serial I/O" port present</p>
+                        </div>
+                    </div>
+                    <div id="hoverimg2" class="column">
+                        <img class="img bounceAnimation bounce" style="cursor: pointer;" alt="ps1slimbounce" src="Images/PS1slim.png"/>
+                        <div id="hovertext2">
+                            <p class="paraHover">Smaller, sleeker design</p>
+                            <p class="paraHover">Compatible with attachable 5-inch LCD screen</p>
+                            <p class="paraHover">Better protection against modchips, making it harder for console hacking</p>
+                            <p class="paraHover">No separate "Reset" button</p>
+                            <p class="paraHover">"Serial I/O" port is not present</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Next and previous arrows-->
+            <a class="prev" onclick="plusSlides(-1), playAudio()">&#10094;</a>
+            <a class="next" onclick="plusSlides(1), playAudio()">&#10095;</a>
+
+            <br><br>
+
+            <!--Dots-->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1), playAudio()"></span>
+                <span class="dot" onclick="currentSlide(2), playAudio()"></span>
+                <span class="dot" onclick="currentSlide(3), playAudio()"></span>
+            </div>
+
+            <br><br><br>    
+
+        </div>
+
+        </section>
+
+        <!--Button to bring users to the anchor at the next section of the web page.-->
+        <div style="display: block; text-align: center; margin-right: 40px;">
+            <a id="nextSection" href="#ps1Benefits"><ul><li class="nextSection" onclick="playAudio()"><p><i class="downArrow"></i></p></li></ul></a>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        <section id="ps1Benefits">
+
+            <h2  style="display: block; font-size: 30px;">PlayStation Benefits</h2>
+            
+            <br>
+
+            <div class="para2">
+                <p>The PS1’s straightforward hardware architecture, triangle polygons, and more effective development tools and
+                    C language support, made it easier for developers to program 3D graphics</p>
+                <p>Most of the third party developers and publishers were eager to help Sony create an impressive PlayStation game
+                    library as they made their jobs relatively easy. This was incredibly crucial for Sony’s timing to break into the console business</p>         
+                <p>Between 1994 to 1998 PS1 games generally have better visual effects than Saturn titles, because pulling off
+                    transparencies is extremely difficult on Saturn and few games attempt it, while on PS1 they are commonly used for explosion and lighting effects</p>
+                <p>Textures applied to shapes enhanced the realistic look that many PlayStation games were striving for.
+                    While the Saturn held up to the PlayStation relatively well, the N64 was greatly limited resulting in more of a cartoon style</p>
+                <p>The PlayStation conquered both the Saturn and the N64 on the texture front, but in different ways</p>
+            </div>
+
+        </section>
+
+        <!--Button to bring users to the anchor at the next section of the web page.-->
+        <div style="display: block; text-align: center; margin-right: 40px;">
+            <a id="nextSection1" href="#ps1Specs"><ul><li class="nextSection" onclick="playAudio()"><p><i class="downArrow"></i></p></li></ul></a>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <section id="ps1Specs">
+
+        <h2  style="display: block; font-size: 30px;">PlayStation Specifications</h2>
+
+        <br>
+
+        <p class="para">CPU: 32-bit RICS MIPS R3051 (33.9MHz)</p>
+        <p class="para">RAM: 2MB, 1MB Video RAM</p>
+        <p class="para">Graphics: 3D Geometry Engine, with 2D rotation, scaling, transparency, fading, 3D texture mapping and shading</p>
+        <p class="para">Geometry Transformation Engine: GPU 180,000 textured polygons per second</p>
+
+        </section>
+
+        <!--Button to bring users to the anchor at the next section of the web page.-->
+        <div style="display: block; text-align: center; margin-right: 40px;">
+            <a id="nextSection2" href="#competitors"><ul><li class="nextSection" onclick="playAudio()"><p><i class="downArrow"></i></p></li></ul></a>
+        </div>
+
+        <br><br><br><br>
+
+        <section id="competitors">
+
+        <!--Slideshow container-->
+        <div class="slideshow2">
+        
+            <h2  style="display: block; font-size: 30px;">Competitors</h2>
+
+            <div class="mySecondSlides fade">
+                <img class="img" alt="nintendo64" src="Images/Nintendo64.png"/>
+                <div class="text">Nintendo 64</div>
+            </div>
+
+            <div class="mySecondSlides fade">
+                <img class="img" alt="segasaturn" src="Images/SegaSaturn.png"/>
+                <div class="text">Sega Saturn</div>
+            </div>
+
+            <div class="mySecondSlides fade">
+                <div class="text">Specifications</div>
+                
+                <!--Images aligned side by side
+                Title: How TO - Align Images Side By Side
+                Author: w3schools
+                Date: 2021
+                Code version: n/a
+                Availability: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
+                <div class="row">
+                    <div id="hoverimg3" class="column">
+                        <img class="img bounceAnimation bounce" style="cursor: pointer;" alt="n64bounce" src="Images/Nintendo64.png"/>
+                        <div id="hovertext3">
+                            <p class="paraHover">CPU: 64-bit R4300i (93.75MHz) / 64-bit data paths, registers with 5-stage pipelining</p>
+                            <p class="paraHover">Co-processor: 64-bit RISC (62.5MHz)</p>
+                            <p class="paraHover">RAM: 4MB (36Mb) upgradeable</p>
+                            <p class="paraHover">Graphics: Pixel Drawing Processor (RDP) built into co-processor</p>
+                            <p class="paraHover">RCP (Reality Co-Processor) SGI developed GPU 1 million polygons per second theorectical 62.5MHz</p>
+                            <p class="paraHover">4MB (expandable to 8MB) RDRAM system memory</p>
+                            <p class="paraHover">Cartridge based games 64MB maximum</p>
+                        </div>
+                    </div>
+                    <div id="hoverimg4" class="column">
+                        <img class="img bounceAnimation bounce" style="cursor: pointer;" alt="saturnbounce" src="Images/SegaSaturn.png"/>
+                        <div id="hovertext4">
+                            <p class="paraHover">CPUT:Two 32-bit SH-2 (28.6MHz) RISC processors</p>
+                            <p class="paraHover">RAM: 2MB, Video RAM: 1.5MB</p>
+                            <p class="paraHover">Graphics: VDP1 and VDP2 with texturing, lighting, transparency</p>
+                            <p class="paraHover">VDP1 - objects (quadrilateral sprites and polygons): 200,000 textured polygons per second, 140,000 with added gouraud shading</p>
+                            <p class="paraHover">VDP2 - backgrounds: 4 background + 1 3D positional background OR 2 3D positional backgrounds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Next and previous arrows-->
+            <a class="prev2" onclick="plusSlides2(-1), playAudio()">&#10094;</a>
+            <a class="next2" onclick="plusSlides2(1), playAudio()">&#10095;</a>
+
+            <br><br><br><br><br><br>
+            
+            
+        <!--Dots-->
+        <div style="text-align: center">
+            <span class="dot2" onclick="currentSlide2(1), playAudio()"></span>
+            <span class="dot2" onclick="currentSlide2(2), playAudio()"></span>
+            <span class="dot2" onclick="currentSlide2(3), playAudio()"></span>
+        </div>
+
+        </div>
+
+        </section>
+
+        <br>
+
+        <!--Button to bring users to the anchor at the next section of the web page.-->
+        <div style="display: block; text-align: center; margin-right: 40px;">
+            <a id="nextSection3" href="#accessories"><ul><li class="nextSection" onclick="playAudio()"><p><i class="downArrow"></i></p></li></ul></a>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+        <section id="accessories">
+
+        <h2  style="display: block; font-size: 30px;">Accessories</h2>
+        
+        <!--Images aligned side by side
+        Title: How TO - Align Images Side By Side
+        Author: w3schools
+        Date: 2021
+        Code version: n/a
+        Availability: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp-->
+        <div class="row2">
+            <div class="column2">
+                <img class="img2" alt="figure8cable" src="Images/Figure8Cable.PNG"/>
+                <img class="imgPrices" alt="price1" src="Images/Price1.png"/>
+                <p class="para">Figure 8 Cable</p>
+            </div>
+            <div class="column2">
+                <img class="img2" alt="lcd" src="Images/LCDScreen.PNG"/>
+                <img class="imgPrices2" alt="price2" src="Images/Price2.png"/>
+                <p class="para">Attachable LCD Screen</p>
+            </div>
+            <div class="column2">
+                <img class="img2" alt="multi-tap" src="Images/Multi-tap.PNG">
+                <img class="imgPrices4" alt="price3" src="Images/Price3.png"/>
+                <p class="para">Attachable Multi-tap</p>
+            </div>
+        </div>
+
+        <div class="row2">
+            <div class="column2">
+                <img class="img2" alt="audioandvideo" src="Images/TV-AV-RCA-Audio&Video-Cable-Lead-Cord.png">
+                <img class="imgPrices1" alt="price4" src="Images/Price1.png"/>
+                <p class="para">TV AV RCA Audio & Video Cable Lead Cord</p>
+            </div>
+            <div class="column2">
+                <img class="img2" alt="controller" src="Images/Controller.png">
+                <img class="imgPrices3" alt="price5" src="Images/Price2.png"/>
+                <p class="para">Controller</p>
+            </div>
+            <div class="column2">
+                <img class="img2" alt="memorycard" src="Images/MemoryCard.png">
+                <img class="imgPrices5" alt="price6" src="Images/Price4.png"/>
+                <p class="para">Memory Card</p>
+            </div>
+        </div>
+        
+        </section>
+
+    </div>
+  
+    <!--Button to bring users to the anchor at the top of the web page.-->
+    <div style="display: block; text-align: center; margin-right: 40px;">
+        <a id="backToTop" href="#logo"><ul><li class="backToTop" onclick="playAudio()"><p><i class="upArrow"></i></p></li></ul></a>
+    </div>
+
+    <!--The only way I could make the slideshow appear properly-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        var slideIndex2 = 1;
+        showSlides2(slideIndex2);
+        scroll();
+    </script>
+
+</body>
+</html>

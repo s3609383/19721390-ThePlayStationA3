@@ -1,0 +1,585 @@
+/**Background**/
+body {
+    background-color: lightgrey;
+    margin: 0 auto;
+}
+
+/*Header 2*/
+h2 {
+  font-family: playstationFont;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*Imported font*/
+@font-face {
+  font-family: playstationFont;
+  src: url(Font/zrnic\ rg.ttf);
+}
+
+/*Button*/
+button {
+  align-items: center;
+}
+
+/*Navigation Menu
+Title: CSS Navigation Bar
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/css/css_navbar.asp*/ 
+ul {
+  font-family: playstationFont;
+  /* overflow: hidden;
+  position: fixed; */
+  width: 100%;
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  ;
+}
+  
+li {
+  float: middle;
+  display: inline;
+}
+
+li img {
+  margin: 0 auto;
+}
+
+#navbar {
+  float: left;
+  display: inline;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  text-decoration: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin:  0 auto;
+  background-color: rgb(0,0,255);
+}
+#navbar a {
+  float: left;
+  width: 20%;
+  display: inline;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+#navbar a:hover:not(.active) {
+  background-color: rgb(0,0,139);
+}
+
+li #logo:hover:not(.active) {
+  background-color: rgb(0,0,255);
+}
+  
+.active {
+  background-color: #04AA6D;
+}
+
+/**PlayStation Logo within Navigation Menu**/
+.playstationLogo {
+  display: block;
+}
+
+/*Allows for an image to display then shrink to see the contents of the web page
+Title: Create Transitions/Animations on Page Load with HTML & CSS - Web Design Tutorial
+Author: dcode
+Date: 2019
+Code version: n/a
+Availability: https://www.youtube.com/watch?v=zWB219zf1og
+
+Title: CSS animation-fill-mode Property
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp
+
+Title: How do I position one image on top of another in HTML?
+Author: rricter
+Date: 2010
+Code version: n/a
+Availability: https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html*/
+#loading {
+  position: absolute;
+  left: 25%;
+  animation: transitionIn 1.00s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scaleX(0) scaleY(0);
+  }
+
+}
+
+#body_content {
+  animation: transitionInBody 1.00s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transitionInBody {
+  from {
+    opacity: 0;
+    transform: scaleX(0) scaleY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+  }
+
+}
+
+/*Images*/
+.img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img2 {
+  width: 33.3%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+/*Images for the prices of each accessory
+Title: How to float one image over another
+Author: CoreLangs.com
+Date: 2020
+Code version: HTML-CSS Source Code
+Availability: http://www.corelangs.com/css/box/ontop.html*/
+.imgPrices {
+  width: 10%;
+  position: absolute;
+  bottom: 460px;
+  left: 100px;
+  z-index: 2;
+}
+
+.imgPrices1 {
+  width: 10%;
+  position: absolute;
+  bottom: 80px;
+  left: 100px;
+  z-index: 2;
+}
+
+.imgPrices2 {
+  width: 10%;
+  position: absolute;
+  bottom: 320px;
+  left: 750px;
+  z-index: 2;
+}
+
+.imgPrices3 {
+  width: 10%;
+  position: absolute;
+  bottom: 80px;
+  left: 750px;
+  z-index: 2;
+}
+
+.imgPrices4 {
+  width: 10%;
+  position: absolute;
+  bottom: 370px;
+  right: 280px;
+  z-index: 2;
+}
+
+.imgPrices5 {
+  width: 10%;
+  position: absolute;
+  bottom: 5px;
+  right: 280px;
+  z-index: 2;
+}
+
+/*Paragraphs*/
+.para {
+  text-align: center;
+  font-family: calibri;
+  font-size: 18px;
+}
+
+.para2 {
+  text-align: center;
+  font-family: calibri;
+  font-size: 18px;
+  width: 66.6%;
+  margin: 0 auto;
+}
+
+/*Images aligned side by side
+Title: How to show text on image when hovering?
+Author: João Paulo Macedo
+Date: 2013
+Code version: n/a
+Availability: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering
+Availability: http://jsfiddle.net/KdVaj/1/*/
+.paraHover {
+  text-align: center;
+  font-family: calibri;
+  font-size: 18px;
+  opacity: 0;
+}
+
+#hoverimg1:hover .paraHover {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+#hoverimg2:hover .paraHover {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+#hoverimg3:hover .paraHover {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+#hoverimg4:hover .paraHover {
+  opacity: 1;
+  transition: .5s ease;
+}
+
+/*Slideshow container
+Title: How TO - Slideshow
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+* {box-sizing: border-box;}
+
+.slideshow, .slideshow2  {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  top: 100px;
+}
+
+/*Hide images by default*/
+.mySlides, .mySecondSlides {
+  display: none;
+}
+
+/*Next and previous arrows*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 75%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/*Postion next arrow to the right*/
+.next, .next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*On hover, add a blue background colour with some transparency*/
+.prev:hover, .next:hover {
+  color: white;
+  background-color: rgb(0,0,255);
+}
+
+.prev2:hover, .next2:hover {
+  color: white;
+  background-color: rgb(0,0,255);
+}
+
+/*Caption text*/
+.text {
+  font-family: playstationFont;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+/*Dots*/
+.dot, .dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.active, .dot2:hover {
+  background-color: #717171;
+}
+
+/*Fading animation*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Two image containter
+Title: How TO - Align Images Side By Side
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/*Clear floats after image containers*/
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Three image containter
+Title: How TO - Align Images Side By Side
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp*/
+.column2 {
+  float: left;
+  width: 33.3%;
+  padding: 5px;
+}
+
+/*Clear floats after image containers*/
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Button to go to the next section*/
+.nextSection {
+  cursor: pointer;
+  position: absolute;
+  
+  width: auto;
+  margin-top: 100px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.nextSection:hover {
+  background-color: rgb(0,0,255);
+}
+
+/*Down Arrow
+Title: How TO - CSS Arrows
+Author: w3schools
+Date: 2021
+Code version: n/a
+Availability: https://www.w3schools.com/howto/howto_css_arrows.asp*/
+.downArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.downArrow:hover {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#nextSection:hover {
+  background-color: rgb(0,0,255);
+  border: solid white;
+}
+
+#nextSection1:hover {
+  background-color: rgb(0,0,255);
+  border: solid white;
+}
+
+#nextSection2:hover {
+  background-color: rgb(0,0,255);
+  border: solid white;
+}
+
+#nextSection3:hover {
+  background-color: rgb(0,0,255);
+  border: solid white;
+}
+
+.nextSection:hover i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/*Button to go to the top*/
+.backToTop {
+  cursor: pointer;
+  position: absolute;
+  
+  width: auto;
+  margin-top: 100px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.backToTop:hover {
+  background-color: rgb(0,0,255);
+}
+
+.upArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.upArrow:hover {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+#backToTop:hover {
+  background-color: rgb(0,0,255);
+  border: solid white;
+}
+
+.backToTop:hover i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+/*Bounce Animation
+Title: CSS - Bounce Effect
+Author: tutorialspoint
+Date: 2021
+Code version: n/a
+Availability: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering*/
+.bounceAnimation {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  background-repeat: repeat;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounce { 
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+  40% {-webkit-transform: translateY(-30px);} 
+  60% {-webkit-transform: translateY(-15px);} 
+} 
+
+@keyframes bounce { 
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-30px);} 
+  60% {transform: translateY(-15px);} 
+}
+
+.bounce { 
+  -webkit-animation-name: bounce; 
+  animation-name: bounce; 
+}
